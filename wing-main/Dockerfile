@@ -18,4 +18,4 @@ RUN npm install
 COPY ./wing-main/CmsWing/ .
 
 EXPOSE 80
-CMD [ "node", "server.js" ]
+CMD [ "node", "development.js" ]
