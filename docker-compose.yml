@@ -1,30 +1,30 @@
 version: '3'
-services:
-  wing-mysql:
-    build:
-      context: ./
-      dockerfile: ./db/Dockerfile
-    environment:
-      MYSQL_ROOT_PASSWORD: DSuxqk1tZjV&
-    restart: always
-    container_name: wing-mysql
-    image: wing-mysql
-    ports:
-      - 3306:3306
-    volumes:
-      - ./wing-mysql:/var/lib/mysql
-    command: --lower_case_table_names=1
+  services:
+    wing-mysql:
+      build:
+        context: ./
+        dockerfile: ./db/Dockerfile
+      environment:
+        MYSQL_ROOT_PASSWORD: DSuxqk1tZjV&
+      restart: always
+      container_name: wing-mysql
+      image: wing-mysql
+      ports:
+        - 3306:3306
+      volumes:
+        - ./wing-mysql:/var/lib/mysql
+      command: --lower_case_table_names=1
 
- wing-main:
-    build:
-      context: ./
-      dockerfile: ./wing-main/Dockerfile
-    restart: always
-    container_name: wing-main
-    image: wing-main
-    ports:
-      - 80:80
-    depends_on:
-      - wing-mysql
-    links:
-      - "wing-mysql"
+  wing-main:
+      build:
+        context: ./
+        dockerfile: ./wing-main/Dockerfile
+      restart: always
+      container_name: wing-main
+      image: wing-main
+      ports:
+        - 80:80
+      depends_on:
+        - wing-mysql
+      links:
+        - "wing-mysql"
