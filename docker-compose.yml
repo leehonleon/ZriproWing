@@ -14,7 +14,8 @@ services:
     volumes:
       - ./wing-mysql:/var/lib/mysql
     command: --lower_case_table_names=1
- wing-main:
+
+  wing-main:
     build:
       context: ./
       dockerfile: ./wing-main/Dockerfile
