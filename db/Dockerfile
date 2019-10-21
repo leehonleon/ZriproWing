@@ -4,4 +4,4 @@ MAINTAINER opgames(opgames.cn@gmail.com)
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Oral /etc/localtime
 
-COPY ./wing-main/cmswing/cmswing.sql /docker-entrypoint-initdb.d
+COPY ./wing-main/CmsWing/cmswing.sql /docker-entrypoint-initdb.d
