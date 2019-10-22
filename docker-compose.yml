@@ -23,7 +23,7 @@ services:
     container_name: wing-main
     image: wing-main
     ports:
-      - 80:8360
+      - 8360:8360
     depends_on:
       - wing-mysql
     links:
