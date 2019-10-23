@@ -33,4 +33,4 @@ services:
       - /CmsWing/view:/app/view
       - /CmsWing/www:/app/www
       - /CmsWing/production.js /app/production.js
-    command: ['node', 'production.js']
+    command: ['node', '/app/production.js']
