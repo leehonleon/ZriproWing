@@ -29,5 +29,8 @@ services:
     links:
       - 'wing-mysql'
     volumes:
-      - ./wing-main/CmsWing:/usr/src/app
-    command: bash -c "npm install && npm run start"
+      - /CmsWing/src:/app/src
+      - /CmsWing/view:/app/view
+      - /CmsWing/www:/app/www
+      - /CmsWing/production.js /app/production.js
+    command: ['node', 'production.js']
