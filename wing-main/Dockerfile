@@ -8,5 +8,3 @@ WORKDIR /usr/src/app
 # Install pm2
 RUN npm install pm2@latest -g
 
-# Install nginx
-RUN npm install nginx
