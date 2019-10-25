@@ -1,1 +1,3 @@
 *.log
+.docker-compose.yml.swp
+wing-mysql/
